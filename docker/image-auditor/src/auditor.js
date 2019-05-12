@@ -29,7 +29,7 @@ socket.on('message', (msg, source) => {
   if (!(currentMusicians.has(musician.uuid))) {
     currentMusicians.set(musician.uuid, {
       instrument: musician.instrument,
-      firstActivity: moment().toISOString,
+      firstActivity: moment().toISOString(),
       lastActivity: moment().unix(),
       sourcePort: source.port,
     });
